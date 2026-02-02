@@ -1,67 +1,68 @@
 # 🌱 Smart Irrigation System with Fuzzy Logic (Raspberry Pi)
 
 ## 📌 Description
-Ce projet est un système d’arrosage intelligent basé sur la **logique floue (Fuzzy Logic)**.  
-Le Raspberry Pi prend les décisions automatiquement à partir des capteurs, sans attendre l’application mobile.
+This project is an intelligent irrigation system based on **Fuzzy Logic**.  
+The Raspberry Pi makes automatic decisions from sensor data, without waiting for the mobile app.
 
 ---
 
-## 🔄 Architecture Générale
-**Capteurs → Raspberry Pi (Fuzzy Logic) → Pompe à eau + Cloud → Application Mobile**
+## 🔄 General Architecture
+**Sensors → Raspberry Pi (Fuzzy Logic) → Water Pump + Cloud → Mobile App**
 
 ---
 
-## 🧩 Étapes du Système
+## 🧩 System Steps
 
-### 1️⃣ Collecte et Conversion (Hardware)
-- Capteurs utilisés :
-  - Humidité du sol  
-  - Température  
-  - Humidité de l’air  
-- Les capteurs mesurent des valeurs physiques.
-- Le Raspberry Pi lit ces valeurs via un **convertisseur analogique-numérique**.
-
----
-
-### 2️⃣ Cerveau IA – Logique Floue (Fuzzy Logic)
-- Le Raspberry Pi récupère les données des capteurs (antécédents).
-- Les données passent dans le moteur de logique floue.
-- Application des règles, par exemple :  
-  **SI humidité du sol est basse ET température haute ALORS arrosage fort**.
-- Calcul automatique du **volume d’eau exact**.
+### 1️⃣ Data Collection and Conversion (Hardware)
+- Sensors used:
+  - Soil moisture  
+  - Temperature  
+  - Air humidity  
+- Sensors measure physical values.
+- Raspberry Pi reads these values via an **analog-to-digital converter (ADC)**.
 
 ---
 
-### 3️⃣ Action et Stockage (Cloud)
-- La pompe à eau est activée via un relais selon la décision.
-- Les données des capteurs + volume d’eau sont envoyées en temps réel sur le **Cloud** (Firebase/Firestore).
+### 2️⃣ AI Brain – Fuzzy Logic
+- Raspberry Pi collects sensor data (inputs).
+- Data is processed by the fuzzy logic engine.
+- Rules are applied, for example:  
+  **IF soil moisture is low AND temperature is high THEN strong watering**.
+- The exact **water volume** is calculated automatically.
 
 ---
 
-### 4️⃣ Visualisation (Application Mobile)
-- L’application mobile affiche les données stockées sur le Cloud.
-- Graphiques, météo et état actuel du système.
-- Aucun calcul n’est effectué côté application, juste la lecture des données.
+### 3️⃣ Action and Storage (Cloud)
+- The water pump is activated via a relay according to the decision.
+- Sensor data + water volume are sent in real-time to the **Cloud** (Firebase/Firestore).
 
 ---
 
-## ⚡ Technologies utilisées
+### 4️⃣ Visualization (Mobile App)
+- The mobile app displays data stored on the Cloud.
+- Shows graphs, weather, and current system status.
+- No calculations are done in the app; it only reads and displays the data.
+
+---
+
+## ⚡ Technologies Used
 - **Raspberry Pi**  
-- **Capteurs** : humidité, température, humidité de l’air  
-- **Logique floue (Fuzzy Logic)**  
-- **Relais pour pompe à eau**  
-- **Cloud** : Firebase / Firestore  
-- **Application Mobile** : lecture des données et visualisation
+- **Sensors**: moisture, temperature, air humidity  
+- **Fuzzy Logic**  
+- **Relay for water pump**  
+- **Cloud**: Firebase / Firestore  
+- **Mobile App**: data reading and visualization
 
 ---
 
-## 🚀 Flux de données
+## 🚀 Data Flow
 
-``` bash
-Capteurs → Raspberry Pi (Fuzzy Logic) → Action (Pompe) + Envoi Cloud → Application Mobile
+```bash
+Sensors → Raspberry Pi (Fuzzy Logic) → Action (Pump) + Send to Cloud → Mobile App
 ```
 
-## 👨‍💻 Auteur
-**Abdellah Karani**
 
+## 👨‍💻 Author
+
+**Made With Love By Abdellah Karani**
 
