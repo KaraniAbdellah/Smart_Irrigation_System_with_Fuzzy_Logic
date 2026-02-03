@@ -1,0 +1,11 @@
+Morocco Weather API (your city)
+    ↓
+Get: Temperature, Humidity, Pressure
+    ↓
+Fuzzy Logic Processor
+    ↓
+Predict: Umbrella (4 levels) + Risk (4 levels)
+    ↓
+Send to Supabase Cloud
+    ↓
+Dashboard shows: "Bring umbrella!" + "Low Risk"
