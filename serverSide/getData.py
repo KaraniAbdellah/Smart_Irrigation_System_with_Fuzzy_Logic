@@ -25,4 +25,5 @@ def getWeather(lan, log):
     response = requests.get(url, params=params)
     return response.json()
 
-
+res = getWeather(1, 2)
+print(res)
